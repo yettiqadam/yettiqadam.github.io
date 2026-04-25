@@ -65,42 +65,42 @@ const QUESTIONS_DB = [
     correct: 1
   },
   {
-    q: "13. Iqtisodiy rayonda O’rta Osiyoda yagona bo’lgan soda zavodi?",
+    q: "Iqtisodiy rayonda O’rta Osiyoda yagona bo’lgan soda zavodi?",
     a: ["Taxiatosh", "Tuyamo'yin", "Mo'ynoq", "Qo'ng'irot"],
     correct: 3
   },
   {
-    q: "14. Quyi Amudaryo iqtisodiy rayonida Navoiy-Nukusni bog’laydigan temiryo’lning uzunligi?",
+    q: "Quyi Amudaryo iqtisodiy rayonida Navoiy-Nukusni bog’laydigan temiryo’lning uzunligi?",
     a: ["125 km", "250 km", "345 km", "100 km"],
     correct: 2
   },
   {
-    q: "15. Quyi Amudaryo iqtisodiy rayonida milliy avtomagistral qurilishida ro’y bergan ulkan voqealardan biri …………… shahriga kiraverishdagi yangi ko’prik va chorraha yo’lining qurilishi?",
+    q: "Quyi Amudaryo iqtisodiy rayonida milliy avtomagistral qurilishida ro’y bergan ulkan voqealardan biri …………… shahriga kiraverishdagi yangi ko’prik va chorraha yo’lining qurilishi?",
     a: ["Urganch", "Nukus", "Mo'ynoq", "Qo'ng'irot"],
     correct: 1
   },
   {
-    q: "16. Iqtisodiy rayondagi gaz-kimyo majmuasiga gazni taqsimlaydigan zavod qayerda joylashgan?",
+    q: "Iqtisodiy rayondagi gaz-kimyo majmuasiga gazni taqsimlaydigan zavod qayerda joylashgan?",
     a: ["Qo'ng'irotda", "Nukusda", "Ustyurtda", "Xo'jaylida"],
     correct: 2
   },
   {
-    q: "17. Quyi Amudaryo iqtisodiy rayonida yuksalib rivojlanayotgan transport turlari?",
+    q: "Quyi Amudaryo iqtisodiy rayonida yuksalib rivojlanayotgan transport turlari?",
     a: ["Avtomobil va temiryo'l", "Avtomobil va suv transporti", "Suv va havo transporti", "Temir yo'l va havo transporti"],
     correct: 0
   },
   {
-    q: "18. Quyi Amudaryo iqtisodiy rayoni qaysi viloyatlarni o’z ichiga oladi?",
+    q: "Quyi Amudaryo iqtisodiy rayoni qaysi viloyatlarni o’z ichiga oladi?",
     a: ["Qoraqalpog'iston Res va Navoiy vil", "Xorazm vil va Navoiy vil", "Qoraqalpog'iston Res va Xorazm vil", "Buxoro vil va Navoiy vil"],
     correct: 2
   },
   {
-    q: "19. Quyi Amudaryo iqtisodiy rayoning qaysi xududlarida yil bo’yi qorako’l qo’ylari boqiladi?",
+    q: "Quyi Amudaryo iqtisodiy rayoning qaysi xududlarida yil bo’yi qorako’l qo’ylari boqiladi?",
     a: ["Cho'l yaylovlarida", "To'qaylarda", "Daryo bo'ylarida", "Sho'rxok yerlarda"],
     correct: 0
   },
   {
-    q: "20. Quyidagilardan qaysi korxonalar yengil sanoat korxonalari hisoblanadi?",
+    q: "Quyidagilardan qaysi korxonalar yengil sanoat korxonalari hisoblanadi?",
     a: ["Navoiy va Nukus", "Elteks va Kateks", "UzEllas va Urganch", "Ustyurt va Xo'jayli"],
     correct: 1
   }
