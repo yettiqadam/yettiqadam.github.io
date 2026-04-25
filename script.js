@@ -4,20 +4,106 @@
  */
 
 const QUESTIONS_DB = [
-    { q: "Quyi Amudaryo iqtisodiy rayoni O’zbekistonning qaysi qismida joylashgan?", a: ["Shimolida", "G'arbida", "Sharqida", "Shimoli-sharqida"], correct: 1 },
-    { q: "Quyi Amudaryo iqtisodiy rayoning qaysi shaharlarida o’sish va qishloqlarda kichik biznes va tadbirkorlikning rivojlanishi hisobiga shaharchalarning vujudga kelishi natijasida shahar aholisi tobora ko’payib bormoqda? (1. Nukus, 2. Chimboy, 3. Urganch, 4. Mo’ynoq, 5. Taxiatosh, 6. Xo’jayli)", a: ["1, 3, 5", "1, 2, 5, 6", "1, 2, 3, 4, 6", "Hammasi"], correct: 1 },
-    { q: "O’zbekistondagi qishloq xo’jaligiga yaroqli yerlarning necha % ushbu rayon hissasiga to’g’ri keladi?", a: ["3%", "5%", "6%", "12%"], correct: 0 },
-    { q: "Quyi Amudaryo iqtisodiy rayoning qishloq xo’jaligida foydalaniladigan yerlarning necha % yaylovlardan iborat hisoblanadi?", a: ["15%", "50%", "75%", "90%"], correct: 3 },
-    { q: "Quyi Amudaryo iqtisodiy rayoni aholisi qishloq xo’jaligida quyidagilardan qaysi tarmoq bilan shug’ullanmaydi?", a: ["Pillachilik", "Sholichilik", "Kanobchilik", "Qorako’lchilik"], correct: 2 },
-    { q: "Quyi Amudaryo iqtisodiy rayoni mamlakatda yetishtirilayotgan sholining qancha qismini beradi?", a: ["Deyarli hammasini", "Yarmidan ko’pini", "25%", "1/3 qismini"], correct: 1 },
-    { q: "Iqtisodiy rayonning paxtachilik bilan birga rivojlanayotgan tarmog’i?", a: ["Pillachilik", "Sholichilik", "Kanobchilik", "Qorako’lchilik"], correct: 1 },
-    { q: "Quyi Amudaryo iqtisodiy rayoning to’qaylarida qaysi hayvon boqiladi?", a: ["Qorako’l qo’ylari", "Yilqi", "Ondatra", "Baliq"], correct: 2 },
-    { q: "Quyi Amudaryo iqtisodiy rayoni sanoatida qaysi sanoat korxonalarining salmag’i katta?", a: ["Tekstil korxonalari", "Paxta tozalash", "Qurilish mollari", "Mashinasozlik"], correct: 1 },
-    { q: "Energetika tanqisligini bartaraf etish uchun Taxiatosh IES va tarkibida GES bo’lgan qaysi gidrouzel barpo etildi?", a: ["Taxiatosh", "Tuyamo’yin", "Mo’ynoq", "Qo’ng’irot"], correct: 1 },
-    { q: "Iqtisodiy rayonning O’rta Osiyoda yagona bo’lgan soda zavodi qayerda joylashgan?", a: ["Taxiatosh", "Tuyamo’yin", "Mo’ynoq", "Qo’ng’irot"], correct: 3 },
-    { q: "Quyi Amudaryo iqtisodiy rayonida Navoiy-Nukusni bog’laydigan temiryo’lning uzunligi qancha?", a: ["125 km", "250 km", "345 km", "100 km"], correct: 2 },
-    { q: "Quyi Amudaryo iqtisodiy rayoni qaysi viloyatlarni o’z ichiga oladi?", a: ["Qoraqalpog’iston Res. va Navoiy vil.", "Xorazm vil. va Navoiy vil.", "Qoraqalpog’iston Res. va Xorazm vil.", "Buxoro vil. va Navoiy vil."], correct: 2 },
-    { q: "Quyi Amudaryo iqtisodiy rayoning qaysi hududlarida yil bo’yi qorako’l qo’ylari boqiladi?", a: ["Cho’l yaylovlarida", "To’qaylarda", "Daryo bo’ylarida", "Sho’rxok yerlarda"], correct: 0 }
+  {
+    q: "Quyi Amudaryo iqtisodiy rayoni O’zbekistonning qaysi qismida joylashgan?",
+    a: ["Shimolida", "G'arbida", "Sharqida", "Shimoli-g'arbida"],
+    correct: 3
+  },
+  {
+    q: "Quyi Amudaryo iqtisodiy rayonining qanday yerlarida aholi qadimdan zich yashab kelgan?",
+    a: ["Lalmikor", "Obikor", "Daryo bo'ylarida", "Vodiylarida"],
+    correct: 1
+  },
+  {
+    q: "Tabiiy tafovutlar natijasida Quyi Amudaryo iqtisodiy rayoni aholi zichligi ……….. tomon kamayib boradi?",
+    a: ["Rayonning janubiga", "Orol dengizi", "Tog'larga", "Shaharlar markazi tomon"],
+    correct: 1
+  },
+  {
+    q: "Quyi Amudaryo iqtisodiy rayoning qaysi shaharlarida o’sish va qishloqlarda kichik biznes va tadbirkorlikning rivojlanishi hisobiga shaharchalarning vujudga kelishi natijasida shahar aholisi tobora ko’payib bormoqda? (1.Nukus 2.Chimboy 3.Urganch 4.Mo’ynoq 5.Taxiatosh 6.Xo’jayli)",
+    a: ["1, 3, 5", "1, 2, 5, 6", "1, 2, 3, 4, 6", "Hammasi"],
+    correct: 3
+  },
+  {
+    q: "O’zbekistondagi qishloq xo’jaligiga yaroqli yerlarning necha % ushbu rayon hissasiga to’g’ri keladi?",
+    a: ["3%", "5%", "6%", "12%"],
+    correct: 2
+  },
+  {
+    q: "Quyi Amudaryo iqtisodiy rayoning qishloq xo’jaligida foydalaniladigan yerlarning necha % yaylovlardan iborat xisoblanadi?",
+    a: ["15%", "50%", "75%", "90%"],
+    correct: 3
+  },
+  {
+    q: "Quyi Amudaryo iqtisodiy rayoni aholisi qishloq xo’jaligida quyidagilardan qaysi tarmoq bilan shug’ullanmaydi?",
+    a: ["Pillachilik", "Sholichilik", "Kanobchilik", "Qorako'lchilik"],
+    correct: 2
+  },
+  {
+    q: "Quyi Amudaryo iqtisodiy rayoni mamlakatda yetishtirilayotgan sholining qancha qismini beradi?",
+    a: ["Deyarli hammasini", "Yarmidan ko'pini", "25%", "1/3 qismini"],
+    correct: 1
+  },
+  {
+    q: "Iqtisodiy rayonning paxtachilik bilan birga rivojlanayotgan tarmog’i?",
+    a: ["Pillachilik", "Sholichilik", "Kanobchilik", "Qorako'lchilik"],
+    correct: 2
+  },
+  {
+    q: "Quyi Amudaryo iqtisodiy rayoning to’qaylarida qaysi hayvon boqiladi?",
+    a: ["Qorako'l qo'ylari", "Yilqi", "Ondatra", "Baliq"],
+    correct: 1
+  },
+  {
+    q: "Quyi Amudaryo iqtisodiy rayoni yengil sanoatida qaysi sanoat korxonalarining salmag’i katta?",
+    a: ["Tekstil korxonalari", "Paxta tozalash", "Qurilish mollari", "Mashinasozlik"],
+    correct: 1
+  },
+  {
+    q: "Energetika tanqisligini bartaraf etish uchun Taxiatosh IES va tarkibida GES bo’lgan ……………. Gidrouzel barpo etildi.",
+    a: ["Taxiatosh", "Tuyamo'yin", "Mo'ynoq", "Qo'ng'irot"],
+    correct: 1
+  },
+  {
+    q: "13. Iqtisodiy rayonda O’rta Osiyoda yagona bo’lgan soda zavodi?",
+    a: ["Taxiatosh", "Tuyamo'yin", "Mo'ynoq", "Qo'ng'irot"],
+    correct: 3
+  },
+  {
+    q: "14. Quyi Amudaryo iqtisodiy rayonida Navoiy-Nukusni bog’laydigan temiryo’lning uzunligi?",
+    a: ["125 km", "250 km", "345 km", "100 km"],
+    correct: 2
+  },
+  {
+    q: "15. Quyi Amudaryo iqtisodiy rayonida milliy avtomagistral qurilishida ro’y bergan ulkan voqealardan biri …………… shahriga kiraverishdagi yangi ko’prik va chorraha yo’lining qurilishi?",
+    a: ["Urganch", "Nukus", "Mo'ynoq", "Qo'ng'irot"],
+    correct: 1
+  },
+  {
+    q: "16. Iqtisodiy rayondagi gaz-kimyo majmuasiga gazni taqsimlaydigan zavod qayerda joylashgan?",
+    a: ["Qo'ng'irotda", "Nukusda", "Ustyurtda", "Xo'jaylida"],
+    correct: 2
+  },
+  {
+    q: "17. Quyi Amudaryo iqtisodiy rayonida yuksalib rivojlanayotgan transport turlari?",
+    a: ["Avtomobil va temiryo'l", "Avtomobil va suv transporti", "Suv va havo transporti", "Temir yo'l va havo transporti"],
+    correct: 0
+  },
+  {
+    q: "18. Quyi Amudaryo iqtisodiy rayoni qaysi viloyatlarni o’z ichiga oladi?",
+    a: ["Qoraqalpog'iston Res va Navoiy vil", "Xorazm vil va Navoiy vil", "Qoraqalpog'iston Res va Xorazm vil", "Buxoro vil va Navoiy vil"],
+    correct: 2
+  },
+  {
+    q: "19. Quyi Amudaryo iqtisodiy rayoning qaysi xududlarida yil bo’yi qorako’l qo’ylari boqiladi?",
+    a: ["Cho'l yaylovlarida", "To'qaylarda", "Daryo bo'ylarida", "Sho'rxok yerlarda"],
+    correct: 0
+  },
+  {
+    q: "20. Quyidagilardan qaysi korxonalar yengil sanoat korxonalari hisoblanadi?",
+    a: ["Navoiy va Nukus", "Elteks va Kateks", "UzEllas va Urganch", "Ustyurt va Xo'jayli"],
+    correct: 1
+  }
 ];
 
 const CITIES = [
