@@ -314,7 +314,7 @@ const Game = {
             { id: 1, name: "Guruh 2", color: "#3498db", pos: CITIES[1].coords.slice(), startCity: 1, iconClass: 'team-2-marker' }
         ];
 
-        globalQuestionBank = [...QUESTIONS_DB].sort(() => Math.random() - 0.5);
+        globalQuestionBank = [...QUESTIONS_DB];
 
         // Phase 1 Rules
         // G1 targets G2's city, G2 targets G1's city
@@ -327,17 +327,14 @@ const Game = {
                 correct: 0,
                 wrong: 0,
                 targetId: (i === 0) ? 1 : 0,
-                questions: [] // We'll get 14 random questions overall, or just draw randomly
+                questions: []
             };
         }
 
-        // Ensure 14 random questions per team if doing specifically 14, or just draw from shuffled bank
-        // Since it's a 7 step game, maximum 14 questions might be asked in total in a bad case.
-        // We'll prepare 14 questions for each just in case.
-        let qBank1 = [...QUESTIONS_DB].sort(() => Math.random() - 0.5);
-        let qBank2 = [...QUESTIONS_DB].sort(() => Math.random() - 0.5);
-        teamState[0].questions = qBank1.slice(0, 14);
-        teamState[1].questions = qBank2.slice(0, 14);
+        // Team 1 (id=0): questions in forward order (index 0 → end)
+        // Team 2 (id=1): questions in reverse order (last → first)
+        teamState[0].questions = [...QUESTIONS_DB];
+        teamState[1].questions = [...QUESTIONS_DB].reverse();
 
         gamePhase = 1;
 
@@ -413,8 +410,8 @@ const Game = {
 
         // Ensure questions exist
         if (tState.questions.length === 0) {
-            // Recycle from global if exhausted
-            tState.questions = [...QUESTIONS_DB].sort(() => Math.random() - 0.5).slice(0, 14);
+            // Recycle: team 0 in forward order, team 1 in reverse order
+            tState.questions = activeTeamId === 0 ? [...QUESTIONS_DB] : [...QUESTIONS_DB].reverse();
         }
 
         const q = tState.questions.shift(); // take one question out
